@@ -4,9 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "vercel-build": "ng build --configuration=production",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+
     "serve:ssr:AngularWebsite": "node dist/angular-website/server/server.mjs"
   },
   "private": true,
