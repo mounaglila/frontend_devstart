@@ -1,23 +1,8 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "dist/angular-website/server/server.mjs",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "dist/angular-website/browser/**",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/assets/(.*)",
-      "dest": "/dist/angular-website/browser/assets/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/dist/angular-website/server/server.mjs"
-    }
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/angular-website",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
